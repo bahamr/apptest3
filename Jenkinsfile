@@ -1,6 +1,6 @@
 def branchName      =  "main"
 def gitUrl          = "https://github.com/bahamr/simple-java-app-main_01.git"
-def gitUrlCode      =  "https://github.com/bahamr/simple-java-app-main_01/tree/911ae3213e52be905c4ed6193172165a6601f449/src"
+def gitUrlCode      =  "https://github.com/bahamr/simple-java-app-main_01.git"
 def serviceName     =  "casper-fe"
 def EnvName         = "prod"
 def imageTag        =  "${EnvName}-${BUILD_NUMBER}"
