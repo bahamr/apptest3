@@ -27,7 +27,7 @@ node () {
     }
   stage ("Get the app code")
     {
-        checkout([$class: 'GitSCM', branches: [[name: "${branchName}"]] , extensions: [], userRemoteConfigs: [[ url: "${"https://github.com/bahamr/simple-java-app-main_01/tree/911ae3213e52be905c4ed6193172165a6601f449/src"}"]]])
+        checkout([$class: 'GitSCM', branches: [[name: "${branchName}"]] , extensions: [], userRemoteConfigs: [[ url: "${gitUrlCode}"]]])
         sh "rm -rf ~/workspace/\"${JOB_NAME}\"/slashtec"
         sh "mkdir ~/workspace/\"${JOB_NAME}\"/slashtec  ; cd slashtec ; git clone -b master ${gitUrl} "
         sh("cp slashtec/devops/casper-fe/${envName}/docker/Dockerfile ${dockerfile}")
