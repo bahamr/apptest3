@@ -13,7 +13,7 @@ def dockerfile      = "Dockerfile-${serviceName}"
 def applicationName = "java-app"
 def envName = "java-app"
 def configName = "java-app"
-def clientId = "${applicationName}-${envName}"
+
 
 node () {
 
@@ -32,10 +32,7 @@ node () {
 
     }
     
-  stage("Get the env varaibles from Appconfig")
-    {
-       sh (" aws appconfig get-configuration --application ${applicationName} --environment ${envName} --configuration ${envName} --region ${awsRegion} --client-id ${clientId} .env")
-    }
+  
     
   stage('login to ecr ')
     {  
