@@ -16,8 +16,9 @@ def configName = "java-app"
 def clientId = "${applicationName}-${envName}"
 
 node () {
- 
-  try {
+
+ try 
+ {
     
   notifyBuild('STARTED')
   stage ('cleanup')
