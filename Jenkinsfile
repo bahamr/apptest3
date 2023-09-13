@@ -65,3 +65,4 @@ node () {
        sh("docker rmi -f ${ecrUrl}/${serviceName}:${imageTag}")
     }
 }
+}
