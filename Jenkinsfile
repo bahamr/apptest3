@@ -17,8 +17,7 @@ def clientId = "${applicationName}-${envName}"
 
 node () {
 
- try 
- {
+ try {
     
   notifyBuild('STARTED')
   stage ('cleanup')
