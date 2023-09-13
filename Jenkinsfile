@@ -28,9 +28,8 @@ node () {
   stage ("Get the app code")
     {
         checkout([$class: 'GitSCM', branches: [[name: "${branchName}"]] , extensions: [], userRemoteConfigs: [[ url: "${gitUrlCode}"]]])
-        sh "rm -rf ~/workspace/\"${JOB_NAME}\"/slashtec"
-        sh "mkdir ~/workspace/\"${JOB_NAME}\"/slashtec  ; cd slashtec ; git clone -b master ${gitUrl} "
-        sh("cp slashtec/devops/casper-fe/${envName}/docker/Dockerfile ${dockerfile}")
+       
+       
 
     }
     
