@@ -21,13 +21,7 @@ node () {
     {
        cleanWs()
     }
-  stage ("Get the app code")
-    {
-        checkout([$class: 'GitSCM', branches: [[name: "${branchName}"]] , extensions: [], userRemoteConfigs: [[ url: "${gitUrlCode}"]]])
-       
-       
-
-    }
+  
     
   
     
