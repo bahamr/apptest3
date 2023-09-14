@@ -13,6 +13,14 @@ def configName = "java-app"
 
 node () {
 
+ environment {
+        AWS_ACCOUNT_ID="120717539064"
+        AWS_DEFAULT_REGION="us-west-2"
+        IMAGE_REPO_NAME="sample"
+        IMAGE_TAG="v1"
+        REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
+    }
+
  try {
     
   notifyBuild('STARTED')
