@@ -13,14 +13,7 @@ def configName = "java-app"
 
 node () {
 
- environment {
-        AWS_ACCOUNT_ID="ASIA2SUZ3SIX62CZVVZ6"
-        AWS_DEFAULT_REGION="eu-west-1"
-        IMAGE_REPO_NAME="sample"
-        IMAGE_TAG="v1"
-        REPOSITORY_URI = "aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 727245885999.dkr.ecr.eu-west-1.amazonaws.com"
-    }
-
+ 
  try {
     
   notifyBuild('STARTED')
