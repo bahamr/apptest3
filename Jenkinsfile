@@ -11,7 +11,6 @@ def applicationName = "java-app"
 def envName = "java-app"
 def configName = "java-app"
 
-
 node () {
 
  try {
@@ -27,7 +26,7 @@ node () {
     
   stage('login to ecr ')
     {  
-       sh("aws ecr get-login-password --region ${awsRegion}  | docker login --username AWS --password-stdin ${ecrUrl}")
+       sh("aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin 727245885999.dkr.ecr.eu-west-1.amazonaws.com")
     }
     
   stage('Build Docker Image')
