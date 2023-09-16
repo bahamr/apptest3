@@ -33,7 +33,7 @@ node () {
   stage('Build Docker Image')
     {
      
-     sh 'mvn clean package'
+    
      sh (" pwd   && docker build -t ${ecrUrl}/${serviceName}:${imageTag} -f ${dockerfile} . ")
     }
    
