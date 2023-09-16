@@ -4,12 +4,14 @@ def gitUrlCode      =  "https://github.com/bahamr/simple-java-app-main_01.git"
 def serviceName     =  "app"
 def EnvName         = "javaapp"
 def imageTag        =  "${EnvName}-${BUILD_NUMBER}"
+def registryId      =  "727245885999"
 def awsRegion       =  "eu-west-1"
+def ecrUrl          =  "727245885999.dkr.ecr.eu-west-1.amazonaws.com"
 def namespace       =  "prod"
 def dockerfile      = "Dockerfile-${serviceName}"
 def applicationName = "java-app"
-def envName = "java-app"
-def configName = "java-app"
+def envName = "prod"
+def configName = "prod"
 
 node () {
 
