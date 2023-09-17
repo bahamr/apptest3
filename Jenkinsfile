@@ -36,7 +36,7 @@ node () {
     {
      
     
-  sh (" pwd   && docker build -t ${ecrUrl}/${serviceName}:${imageTag} -f Dockerfile . ")
+  sh (" pwd   && docker build -t ${ecrUrl}/${serviceName}:${imageTag} -f ${dockerfile} . ")
      
     }
    
