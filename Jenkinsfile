@@ -41,7 +41,7 @@ node () {
    
   stage('Push Docker Image To ECR')
     {
-      docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest
+     sh 'docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest'
     }
     
   stage ("Deploy ${serviceName} to ${branchName} Enviroment")
