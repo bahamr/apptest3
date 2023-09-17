@@ -1,5 +1,5 @@
 FROM maven:3.6.3-jdk-11-slim
-ARG var/lib/jenkins/workspace/apptest3/Dockerfile-apptest
+ARG var/lib/jenkins/workspace/apptest3/Dockerfile
 COPY src /app/src
 COPY pom.xml /app
 RUN mvn -f /app/pom.xml clean package
