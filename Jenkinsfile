@@ -36,7 +36,7 @@ node () {
     {
      
     
-     sh ' docker build -t apptest/java-app:test1 .'
+     sh (" pwd   && docker build -t ${ecrUrl}/${serviceName}:${imageTag} -f ${dockerfile} . ")
     }
    
   stage('Push Docker Image To ECR')
