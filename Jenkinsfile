@@ -8,7 +8,7 @@ def registryId      =  "727245885999"
 def awsRegion       =  "eu-west-1"
 def ecrUrl          =  "727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest"
 def namespace       =  "prod"
-def dockerfile      = "Dockerfile-${serviceName}"
+def Dockerfile      = "Dockerfile-${serviceName}"
 def applicationName = "java-app"
 def envName = "prod"
 def configName = "prod"
@@ -36,7 +36,7 @@ node () {
     {
      
     
-     sh (" pwd   && docker build -t ${ecrUrl}/${serviceName}:${imageTag} -f ${dockerfile} . ")
+     sh (" pwd   && docker build -t ${ecrUrl}/${serviceName}:${imageTag} -f ${Dockerfile} . ")
     }
    
   stage('Push Docker Image To ECR')
