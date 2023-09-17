@@ -36,7 +36,7 @@ node () {
     {
      
     
-     sh "docker build -t apptest/java-app:test1 ." 
+     sh ' docker build -t apptest/java-app:test1 .'
     }
    
   stage('Push Docker Image To ECR')
