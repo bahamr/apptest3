@@ -37,6 +37,7 @@ node () {
      
     
   sh 'docker build -t apptest .'
+  sh'  docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest '  
      
     }
    
