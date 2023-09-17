@@ -35,8 +35,8 @@ node () {
   stage('Build Docker Image')
     {
      
-  sh'cd /var/lib/jenkins/workspace/apptest3  sh 'docker build -t apptest .'
-  sh'  docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest '  
+  sh   'cd /var/lib/jenkins/workspace/apptest3  sh 'docker build -t apptest .'
+  sh  'docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest'  
      
     }
    
