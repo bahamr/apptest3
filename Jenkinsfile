@@ -36,14 +36,14 @@ node () {
     {
      
  
-  sh  "docker build /home/ec2-user/app/apptest3 -t apptest2"
-  sh  "docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest" 
+  sh  'docker build /home/ec2-user/app/apptest3 -t apptest2'
+  sh  'docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest' 
      
     }
    
   stage('Push Docker Image To ECR')
     {
-     sh "docker push 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest"
+     sh 'docker push 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest'
     }
     
   stage ("Deploy ${serviceName} to ${branchName} Enviroment")
