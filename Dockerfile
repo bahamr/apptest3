@@ -1,5 +1,5 @@
 FROM maven:3.6.3-jdk-11-slim
-COPY src /app/src
+COPY var/lib/jenkins/workspace/apptest3
 COPY pom.xml /app
 RUN mvn -f /app/pom.xml clean package
 
