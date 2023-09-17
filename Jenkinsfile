@@ -36,12 +36,12 @@ node () {
     {
      
     
-     sh (" pwd && docker build -t ${ecrUrl}/${serviceName}:${imageTag} -f ${Dockerfile} . ")
+     sh 'docker build -t apptest .'
     }
    
   stage('Push Docker Image To ECR')
     {
-       sh("docker push ${ecrUrl}/${serviceName}:${imageTag}")
+      docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest
     }
     
   stage ("Deploy ${serviceName} to ${branchName} Enviroment")
