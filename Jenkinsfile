@@ -36,7 +36,7 @@ node () {
     {
      
  
-  sh  'docker build /home/ec2-user/app2/apptest3 -t apptest2'
+  sh  'docker build /var/lib/jenkins/javaapptest/apptest3 -t apptest2'
   sh  'docker tag apptest:latest 727245885999.dkr.ecr.eu-west-1.amazonaws.com/apptest:latest' 
      
     }
