@@ -50,7 +50,7 @@ node () {
   stage ("Deploy ${serviceName} to ${branchName} Enviroment")
     {
        withAWS(credentials: 'AWS-EKS', region: 'eu-west-1') {
-       sh 'aws eks update-kubeconfig --eu-west-1 --name eks-app-test'
+       sh 'aws eks update-kubeconfig --region eu-west-1 --name eks-app-test'
        sh 'kubectl apply -f ./k8s/deployment.yaml'
         
 }
