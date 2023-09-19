@@ -50,10 +50,9 @@ node () {
   stage ("Deploy ${serviceName} to ${branchName} Enviroment")
     {
        
-        sh 'aws eks update-kubeconfig --region eu-west-1 --name eks-app-test'
-        sh 'kubectl apply -f ./k8s/deployment.yaml'
-       //sh ("kubectx ${k8sContext}")
-       //sh ("helm upgrade --wait --install -n ${namespace} java-app  ${helmDir} --set image.repository=${ecrUrl}/${serviceName} --set image.tag=${imageTag} --set namespace=${namespace}")
+        
+       sh ("kubectx ${k8sContext}")
+       sh ("helm upgrade --wait --install -n ${namespace} java-app  ${helmDir} --set image.repository=${ecrUrl}/${serviceName} --set image.tag=${imageTag} --set namespace=${namespace}")
        
       
     }
