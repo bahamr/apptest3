@@ -50,7 +50,7 @@ node () {
   stage ("Deploy ${serviceName} to ${branchName} Enviroment")
     {
        sh ("kubectx ${k8sContext}")
-       sh ("helm upgrade --wait --install -n ${namespace} casper-fe  ${helmDir} --set image.repository=${ecrUrl}/${serviceName} --set image.tag=${imageTag} --set namespace=${namespace}")
+       sh ("helm upgrade --wait --install -n ${namespace} java-app  ${helmDir} --set image.repository=${ecrUrl}/${serviceName} --set image.tag=${imageTag} --set namespace=${namespace}")
        
       
     }
