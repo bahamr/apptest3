@@ -49,7 +49,10 @@ node () {
     
   stage ("Deploy ${serviceName} to ${branchName} Enviroment")
     {
-       withAWS(credentials: 'AWS-EKS', region: 'eu-west-1') {
+      sh 'export AWS_ACCESS_KEY_ID="ASIA2SUZ3SIXYDD4F3CB"
+export AWS_SECRET_ACCESS_KEY="xk6MhnpLeeE1y1XDgCXWBmxHtdfyeb77ykNJCCDt"
+export AWS_SESSION_TOKEN="IQoJb3JpZ2luX2VjEBsaCWV1LXdlc3QtMSJGMEQCIEeL++a4ViOylZctn+o6/tnZQQ3+7ffZLKV2wyYMWJO+AiA8r9ibcfVyQS7vNib23dbwzeZFDmoZLImKJQb1nSxWDiqLAwj0//////////8BEAQaDDcyNzI0NTg4NTk5OSIM4ynn+zYMl7LcgAPSKt8CEfaNCIXUKxBPoDrWUQDaMIxL6hfdlIBToqbsMOPNuoqoANtfHn8+RnbSrtZKYSH1kDUJrze6cu3J+cX3D/Nddc+KNkBSbOP2AAnCqIZHOS7a5jOAkEkodScyB87Mp0eq2Z72Xut0aCN4jiPCaGjD2q5PuCd9iKHHiUcesVmvpxO7cBhuJ4L9LX7sF9sE77NpjHzCV3+Cpf5cKwMS7qRTtCqyBJnzrQsmvIyKkCNArpU2iTEJaPHelXDKRTY4PgXcdhBxiwaclTnjw0FRvPrVQCEfp7p/bfKg1v7wxvmb6XQcR7OOeoVTEMi6NgSB12mqnKZzgt40Zs0uLVW1Kp+PDPjP2+PBxVKPgN1V2AzcX18tVoEZlY/jnSjZxyveynNyGza72uPyv6E4YJ0nQYd0ouGrPG0cdddKh3Pxu/hdCjivor0aS1OUnP5r1TZbn4akwopp9013r4P/xJvJJu84MJW+/acGOqcBc7La4avr1Oxot077bDArAC5CHfjKgWAeNnwpPTWcVOZyAJiBeEMjAZvnyRRZWIdcFrSJ5gakd8MGH5XA7GAyNTvE8z56O8TPW3Tc/m+YnzlLokqbRu9DtZ5G+vFjBKwacNu0pPYBalKzx3tDSP9Ub36UqZgcBWBYoIasmMU207+Os7fqy1dCh0vSvls/dkRL9T+LIFKLNUhPu+yBp33Ob7Rmtz4m1S4="'
+     withAWS(credentials: 'AWS-EKS', region: 'eu-west-1') {
        sh 'aws eks update-kubeconfig --region eu-west-1 --name eks-app-test'
        sh 'kubectl apply -f ./k8s/deployment.yaml'
         
